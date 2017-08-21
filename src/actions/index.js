@@ -22,3 +22,14 @@ export function addStudent(entry){
 export function retrieveAll(){
 
 }
+
+export function updateEntry(){
+
+}
+
+export function deleteEntry(entry){
+    return{
+        type: DEL_RECORD,
+        payload: entry,
+    }
+}

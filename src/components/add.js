@@ -9,11 +9,12 @@ class Add extends Component{
 
     handleAddEntry(values){
         this.props.addStudent(values);
+        this.props.reset("add");
         //action creator here to send entry objecgt to the server via axios call
     }
 
     render(){
-        const {handleSubmit, error} = this.props;
+        const {error, handleSubmit, reset} = this.props;
 
         return(
             <div>
@@ -25,7 +26,7 @@ class Add extends Component{
                     </div>
                     <div>
                         <button type="submit" className="btn btn-primary" label="Add" >Add</button>
-                        <button type="button" className="btn btn-danger" label="Clear">Clear</button>
+                        <button onClick={reset} type="button" className="btn btn-danger" label="Clear">Clear</button>
                     </div>
                 </form>
             </div>

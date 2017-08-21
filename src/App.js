@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Add from './components/add';
-import Entries from './components/entries';
+import EntryBody from './components/entry_body';
 
 class App extends Component {
 
@@ -11,7 +11,7 @@ class App extends Component {
             <div className="container-fluid">
                 <div className="row">
                     <Add />
-                    <Entries />
+                    <EntryBody />
                 </div>
             </div>
         );

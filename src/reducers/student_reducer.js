@@ -11,7 +11,7 @@ const defaultState = {all:[], error: null};
 export default function(state = defaultState, action){
     switch (action.type){
         case ADD_RECORD:
-            return {...state, all: state.all.push(action.payload)};
+            return {...state, all: [...state.all, action.payload]};
         default:
             return state;
     }
