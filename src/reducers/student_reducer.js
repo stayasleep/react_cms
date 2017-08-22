@@ -12,6 +12,8 @@ export default function(state = defaultState, action){
     switch (action.type){
         case ADD_RECORD:
             return {...state, all: [...state.all, action.payload]};
+        case UPD_RECORD:
+            return {...state}
         default:
             return state;
     }

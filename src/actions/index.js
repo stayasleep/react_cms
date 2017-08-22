@@ -23,8 +23,11 @@ export function retrieveAll(){
 
 }
 
-export function updateEntry(){
-
+export function updateEntry(entry){
+    return{
+        type: UPD_RECORD,
+        payload: entry,
+    }
 }
 
 export function deleteEntry(entry){
