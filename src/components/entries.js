@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Field, reduxForm} from 'redux-form';
 import {connect} from 'react-redux';
 import renderInput from './utilities/renderInput';
-import { addStudent } from '../actions/index';
+import { addStudent, deleteEntry } from '../actions/index';
 import Btn from './utilities/buttons';
 
 class Entries extends Component{
@@ -22,7 +22,10 @@ class Entries extends Component{
         this.setState({enableEdit: !this.state.enableEdit});
     }
     handleDelete(){
-        console.log('am doin a deletin');
+        const deleteID = {"id": this.props.record.id};
+        console.log('am doin a deletin',this.props.record);
+        this.props.deleteEntry(deleteID);
+
     }
     handleSubmitEntry(values){
         console.log('submitted vals',values);
@@ -41,7 +44,7 @@ class Entries extends Component{
         return(
             <div>
                 {!this.state.enableEdit ? (
-                    <div>
+                    <div className="entryContainer" key={this.props.record.id}>
                         <div className="nameField">{this.props.record.name}</div>
                         <div className="courseField">{this.props.record.course}</div>
                         <div className="gradeField">{this.props.record.grade}</div>
@@ -94,5 +97,5 @@ function mapStateToProps(state){
         entries: state.entries.all,
     }
 }
-export default connect(mapStateToProps,{ addStudent })(Entries);
+export default connect(mapStateToProps,{ addStudent, deleteEntry })(Entries);
 // export default Entries;

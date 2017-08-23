@@ -2,11 +2,13 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import { Field, reduxForm } from 'redux-form';
 import Entries from './entries';
+import { retrieveAll } from '../actions/index'
 
 
 class EntryBody extends Component{
     componentWillMount(){
         console.log('will axios go here',this.props);
+        this.props.retrieveAll();
     };
     componentDidMount(){
         console.log('did axios go here',this.props);
@@ -43,4 +45,4 @@ function mapStateToProps(state){
     }
 }
 
-export default connect(mapStateToProps,{})(EntryBody);
+export default connect(mapStateToProps,{ retrieveAll })(EntryBody);

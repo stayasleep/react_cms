@@ -2,13 +2,14 @@ import React,{Component} from 'react';
 import { connect } from 'react-redux';
 import { Field, reduxForm } from 'redux-form';
 import renderInput from './utilities/renderInput';
-import { addStudent } from '../actions/index';
+import { addStudent, addRecord } from '../actions/index';
 
 
 class Add extends Component{
 
     handleAddEntry(values){
-        this.props.addStudent(values);
+        console.log('am values', values);
+        this.props.addRecord(values);
         this.props.reset("add");
         //action creator here to send entry objecgt to the server via axios call
     }
@@ -50,4 +51,4 @@ Add = reduxForm({
     validate
 })(Add);
 
-export default connect(null,{addStudent})(Add);
+export default connect(null,{addRecord})(Add);
