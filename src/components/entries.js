@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Field, reduxForm} from 'redux-form';
 import {connect} from 'react-redux';
 import renderInput from './utilities/renderInput';
-import { addStudent, deleteEntry } from '../actions/index';
+import { updateEntry, deleteEntry } from '../actions/index';
 import Btn from './utilities/buttons';
 
 class Entries extends Component{
@@ -12,14 +12,22 @@ class Entries extends Component{
             enableEdit: false,
         }
     }
+    componentWillMount() {
+        console.log('entries will mount', this.props);
+    }
+
 
     handleEdit(){
-        console.log('edit mode',this.state.enableEdit);
-        const {name, course, grade} = this.props.record;
-        this.props.editValue.name = name;
-        this.props.editValue.course =course;
-        this.props.editValue.grade = grade;
-        this.setState({enableEdit: !this.state.enableEdit});
+        console.log('edit mode',this);
+
+        const {name, course_name, grade} = this.props.entries[this.props.position];
+        this.props.initialValues.name = name;
+        this.props.initialValues.course =course_name;
+        this.props.initialValues.grade = grade;
+        this.setState({
+            enableEdit: !this.state.enableEdit,
+
+        });
     }
     handleDelete(){
         const deleteID = {"id": this.props.record.id};
@@ -28,25 +36,33 @@ class Entries extends Component{
 
     }
     handleSubmitEntry(values){
-        console.log('submitted vals',values);
-        this.props.addStudent(values);
+        let edited = {...values, "id":this.props.record.id};
+
+        console.log('submitted vals',edited);
+        this.props.updateEntry(edited);
+        this.setState({
+            enableEdit: !this.state.enableEdit,
+        })
     }
     handleCancelClick(){
-        console.log('state before change',this.state.enableEdit);
         this.setState({enableEdit: !this.state.enableEdit});
-        console.log('stae after',this.state.enableEdit);
     }
 
     render(){
         console.log('entries component',this.props);
         const {handleSubmit, error} = this.props;
+        // const { initialValues } = this.props;
+        // // if(!initialValues.length){
+        //     initialValues.push({"name":"","course":"","grade":""});
+        // // }
+
 
         return(
             <div>
                 {!this.state.enableEdit ? (
                     <div className="entryContainer" key={this.props.record.id}>
                         <div className="nameField">{this.props.record.name}</div>
-                        <div className="courseField">{this.props.record.course}</div>
+                        <div className="courseField">{this.props.record.course_name}</div>
                         <div className="gradeField">{this.props.record.grade}</div>
                         <div className="optsField">
                             <button type="button" onClick={this.handleEdit.bind(this)}>Edit</button>
@@ -56,12 +72,12 @@ class Entries extends Component{
 
                     </div>
                 ) : (
-                    <div>
-                        <form onSubmit={handleSubmit((values) => {this.handleSubmitEntry(values)})}>
+                    <div >
+                        <form key={this.props.record.id} onSubmit={handleSubmit((values) => {this.handleSubmitEntry(values)})}>
                             <div>
-                                <Field name="name" label={this.props.record.name} component={renderInput} />
-                                <Field name="course" label={this.props.record.course} component={renderInput} />
-                                <Field name="grade" label={this.props.record.grade} type="number" component={renderInput} />
+                                <Field name="name"  val={ this.props.record.name} component={renderInput} />
+                                <Field name="course" val={this.props.record.course_name} component={renderInput} />
+                                <Field name="grade" val={this.props.record.grade} type="number" component={renderInput} />
                             </div>
                             <div>
                                 <button type="submit" className="btn btn-primary" label="Add" >Submit</button>
@@ -88,14 +104,18 @@ function validate(values) {
 
 Entries = reduxForm({
     form: 'edit',
-    editValue: {"name":"", "course":"", "grade":""},
+    initialValues: {"name":"", "course":"", "grade":""},
+    // initialValues: [],
+    enableReinitialize: true,
     validate
 })(Entries);
 
-function mapStateToProps(state){
+function mapStateToProps(state, ownProps){
     return{
         entries: state.entries.all,
+        form: `edit${ownProps.position}`,
     }
 }
-export default connect(mapStateToProps,{ addStudent, deleteEntry })(Entries);
+
+export default connect(mapStateToProps,{ updateEntry, deleteEntry })(Entries);
 // export default Entries;

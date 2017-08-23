@@ -14,9 +14,11 @@ export default function(state = defaultState, action){
             return {...state, add: action.payload};
         case RETR_RECORDS:
             console.log('retrieve reduce',action.payload);
-            return{...state, all: action.payload};
+            return {all: action.payload};
         case UPD_RECORD:
-            return {...state}
+            return {...state, upd: action.payload};
+        case DEL_RECORD:
+            return {...state, del: action.payload};
         default:
             return state;
     }

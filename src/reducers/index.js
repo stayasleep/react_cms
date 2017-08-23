@@ -1,6 +1,5 @@
 import { combineReducers } from 'redux';
 import { reducer as formReducer } from 'redux-form';
-import addedStudent from './student';
 import studentReducer from './student_reducer';
 
 const rootReducer = combineReducers({

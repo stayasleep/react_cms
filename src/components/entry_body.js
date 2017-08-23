@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import { Field, reduxForm } from 'redux-form';
 import Entries from './entries';
-import { retrieveAll } from '../actions/index'
+import { retrieveAll } from '../actions/index';
 
 
 class EntryBody extends Component{
@@ -10,19 +10,24 @@ class EntryBody extends Component{
         console.log('will axios go here',this.props);
         this.props.retrieveAll();
     };
-    componentDidMount(){
-        console.log('did axios go here',this.props);
-    }
 
     componentWillReceiveProps(nextProps){
         console.log('next prop yo', nextProps);
-        // this.props.retrieveAll();
+        console.log('this next prop',this.props);
+        console.log('it exist',this.props.allState.add);
+        if(nextProps.allState.add){
+            this.props.retrieveAll();
+        }else if(nextProps.allState.del){
+            this.props.retrieveAll();
+        }else if(nextProps.allState.upd){
+            this.props.retrieveAll();
+        }
     }
 
     render(){
-        console.log('render prop',this.props.entries);
+        console.log('render prop',this.props);
         const entries = this.props.entries.map((record, index) => {
-            return <Entries key={index} record={record} />
+            return <Entries key={index} record={record} position={index} />
         });
         return(
             <div>

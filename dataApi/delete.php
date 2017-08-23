@@ -7,7 +7,11 @@ if (mysqli_connect_errno()){
     exit();
 }
 //check if you have all the data you need from the client-side call.
-$id=$_POST['id'];
+$contents= file_get_contents("php://input");
+$contents = utf8_encode($contents);
+$res = json_decode($contents);
+$id = $res->{"id"};
+
 //escape vars
 $min = 0;
 $max = 1000;

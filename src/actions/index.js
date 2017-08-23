@@ -55,10 +55,17 @@ export function retrieveAll(){
     }
 }
 
-export function updateEntry(entry){
-    return{
-        type: UPD_RECORD,
-        payload: entry,
+export function updateEntry(updateObj){
+    return function(dispatch) {
+        axios.post(`${BASE_URL}update`, updateObj).then((response) => {
+            console.log('resp ax up',response);
+            if(response.data.success){
+                dispatch({
+                    type: UPD_RECORD,
+                    payload: response.data.success,
+                })
+            }
+        })
     }
 }
 
@@ -66,6 +73,12 @@ export function deleteEntry(id){
     return function(dispatch){
         axios.post(`${BASE_URL}delete`, id).then((response) => {
             console.log('response delete',response);
+            if(response.data.success){
+                dispatch({
+                    type: DEL_RECORD,
+                    payload:response.data.success,
+                })
+            }
         })
     };
 

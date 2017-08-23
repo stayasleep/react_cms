@@ -8,8 +8,6 @@ if (mysqli_connect_errno()){
     printf("Connect failed: %s\n",mysqli_connect_error());
     exit();
 }
-$stuff = $_REQUEST;
-//print_r($stuff);
 $contents= file_get_contents("php://input");
 //print_r($contents);
 $contents = utf8_encode($contents);
