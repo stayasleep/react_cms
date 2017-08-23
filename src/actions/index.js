@@ -6,10 +6,14 @@ import {
     FILTER_RECORDS,
 } from './type';
 import axios from 'axios';
-const BASE_URL = "../data.php?action=";
-// const BASE_URL = "http://localhost:8080/react_cms/data.php?action=";
 
-//axios to send object to the database
+axios.defaults.headers.post['Content-Type'] = "application/x-www-form-urlencoded";
+
+// const BASE_URL = "../data.php?action=";//works if you use the build html file
+const BASE_URL = "http://localhost:8080/react_cms/data.php?action="; //cross origin issues perhaps
+// const BASE_URL = "http://localhost:3000/data.php?action=";
+// const BASE_URL = "/react_cms/data.php?action=";
+
 //using mysql, the response will only alert if the row was inserted or not
 //need a follow up axios call to retrive all from db
 export function addStudent(entry){
@@ -21,8 +25,9 @@ export function addStudent(entry){
 }
 export function addRecord(entry){
     console.log('add record',entry);
+    let newEntry = JSON.stringify(entry);
     return function (dispatch){
-        axios.post(`${BASE_URL}insert`, entry).then((response) => {
+        axios.post(`${BASE_URL}insert`,entry ).then((response) => {
             console.log('response back',response);
         }).catch((err) => {
             console.log('is err',err);
@@ -35,7 +40,7 @@ export function addRecord(entry){
 export function retrieveAll(){
     return function(dispatch){
         axios.post(`${BASE_URL}readAll`).then((response) => {
-            console.log('retrieve all ax',response);
+            console.log('retrieve all axios',response);
             if(response.data.success){
                 dispatch({
                     type: RETR_RECORDS,

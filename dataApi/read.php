@@ -1,6 +1,5 @@
 <?php
 /*check connection*/
-header('Access-Control-Allow-Origin: *');
 
 if (mysqli_connect_errno()){
     printf("Connect failed: %s\n",mysqli_connect_error());
@@ -11,7 +10,6 @@ if (mysqli_connect_errno()){
 $query = "SELECT * FROM `student_data`";
 //send the query to the database, store the result of the query into $result
 $result = mysqli_query($conn,$query);
-//print_r($result);
 
 //check if $result is empty.
 if(empty($result)){

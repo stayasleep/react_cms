@@ -1,5 +1,9 @@
 <?php
-//header('Access-Control-Allow-Origin: *');
+header('Content-Type: application/x-www-form-urlencoded');
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: POST,GET,OPTIONS');
+header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+
 define('fromData',true);
 
 $action = $_GET['action'];

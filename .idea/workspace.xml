@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="315a24ce-f6cd-4189-a98b-0529a50f50c9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dataApi/delete.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dataApi/insert.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dataApi/read.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data.php" afterPath="$PROJECT_DIR$/data.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataApi/insert.php" afterPath="$PROJECT_DIR$/dataApi/insert.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dataApi/read.php" afterPath="$PROJECT_DIR$/dataApi/read.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/actions/index.js" afterPath="$PROJECT_DIR$/src/actions/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/add.js" afterPath="$PROJECT_DIR$/src/components/add.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/entries.js" afterPath="$PROJECT_DIR$/src/components/entries.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/entry_body.js" afterPath="$PROJECT_DIR$/src/components/entry_body.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/reducers/student_reducer.js" afterPath="$PROJECT_DIR$/src/reducers/student_reducer.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -67,10 +62,10 @@
           <file leaf-file-name="read.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/dataApi/read.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="416">
-                  <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+                <state relative-caret-position="104">
+                  <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
                   <folding>
-                    <marker date="1503449927132" expanded="true" signature="275:303" ph="SELECT * FRO... student_data" />
+                    <marker date="1503455891303" expanded="true" signature="233:261" ph="SELECT * FRO... student_data" />
                   </folding>
                 </state>
               </provider>
@@ -163,8 +158,8 @@
           <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/actions/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="440">
-                  <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+                <state relative-caret-position="605">
+                  <caret line="29" column="44" lean-forward="false" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
                   <folding>
                     <element signature="e#0#111#0" expanded="true" />
                   </folding>
@@ -175,10 +170,10 @@
           <file leaf-file-name="insert.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/dataApi/insert.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="495">
-                  <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+                <state relative-caret-position="275">
+                  <caret line="5" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
                   <folding>
-                    <marker date="1503453092603" expanded="true" signature="1339:1411" ph="INSERT INTO `student_data`... " />
+                    <marker date="1503454681621" expanded="true" signature="1401:1473" ph="INSERT INTO `student_data`... " />
                   </folding>
                 </state>
               </provider>
@@ -200,7 +195,7 @@
             <entry file="file://$PROJECT_DIR$/data.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="57">
-                  <caret line="1" column="43" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+                  <caret line="1" column="55" lean-forward="false" selection-start-line="1" selection-start-column="55" selection-end-line="1" selection-end-column="55" />
                   <folding />
                 </state>
               </provider>
@@ -236,16 +231,16 @@
         <option value="$PROJECT_DIR$/src/components/utilities/buttons.js" />
         <option value="$PROJECT_DIR$/src/components/utilities/renderInput.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/mysql_connect.php" />
         <option value="$PROJECT_DIR$/src/components/entry_body.js" />
         <option value="$PROJECT_DIR$/src/reducers/student_reducer.js" />
         <option value="$PROJECT_DIR$/src/components/add.js" />
         <option value="$PROJECT_DIR$/src/components/entries.js" />
         <option value="$PROJECT_DIR$/build/index.html" />
         <option value="$PROJECT_DIR$/dataApi/delete.php" />
-        <option value="$PROJECT_DIR$/data.php" />
-        <option value="$PROJECT_DIR$/dataApi/read.php" />
+        <option value="$PROJECT_DIR$/mysql_connect.php" />
         <option value="$PROJECT_DIR$/dataApi/insert.php" />
+        <option value="$PROJECT_DIR$/dataApi/read.php" />
+        <option value="$PROJECT_DIR$/data.php" />
         <option value="$PROJECT_DIR$/src/actions/index.js" />
       </list>
     </option>
@@ -310,52 +305,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="react_cms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="react_cms" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="reducers" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="react_cms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="react_cms" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dataApi" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="react_cms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="react_cms" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="build" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -464,18 +413,18 @@
       <option name="presentableId" value="Default" />
       <updated>1503283603119</updated>
       <workItem from="1503283604753" duration="28772000" />
-      <workItem from="1503360512876" duration="19417000" />
+      <workItem from="1503360512876" duration="24299000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48189000" />
+    <option name="totallyTimeSpent" value="53071000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="7984" y="-16" width="4032" height="2080" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12974359" sideWeight="0.49582464" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12974359" sideWeight="0.49582464" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -704,14 +653,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysql_connect.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="2" column="2" lean-forward="true" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/reducers/student.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
@@ -796,14 +737,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="1" column="43" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/add.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="365">
@@ -814,30 +747,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mysql_connect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="2" column="2" lean-forward="true" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dataApi/read.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="104">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
-            <marker date="1503449927132" expanded="true" signature="275:303" ph="SELECT * FRO... student_data" />
+            <marker date="1503455891303" expanded="true" signature="233:261" ph="SELECT * FRO... student_data" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dataApi/insert.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="275">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
-            <marker date="1503453092603" expanded="true" signature="1339:1411" ph="INSERT INTO `student_data`... " />
+            <marker date="1503454681621" expanded="true" signature="1401:1473" ph="INSERT INTO `student_data`... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="1" column="55" lean-forward="false" selection-start-line="1" selection-start-column="55" selection-end-line="1" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/actions/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        <state relative-caret-position="605">
+          <caret line="29" column="44" lean-forward="false" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
           <folding>
             <element signature="e#0#111#0" expanded="true" />
           </folding>
