@@ -26,21 +26,33 @@ class EntryBody extends Component{
 
     render(){
         console.log('render prop',this.props);
-        const entries = this.props.entries.map((record, index) => {
-            return <Entries key={index} record={record} position={index} />
-        });
+        // const entries = this.props.entries.map((record, index) => {
+        //     return <Entries key={index} formKey={index.toString()} initialValues={record} record={record} position={index} />
+        // });
         return(
             <div>
-                {this.props.entries.length === 0 ? (
-                        <div>
-                            There are no records in the database, please add some new entries!
-                        </div>
-                    ) : (
-                        <div>
-                            { entries }
-                        </div>
-                    )
-                }
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Course</th>
+                            <th>Grade</th>
+                            <th>Options</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {this.props.entries.length === 0 ? (
+                                <tr>
+                                    <td>There are no records in the database, please add some new entries!</td>
+                                </tr>
+                            ) : (
+                                this.props.entries.map((record, index) => {
+                                    return <Entries key={index} formKey={index.toString()} initialValues={record} record={record} position={index} />
+                                })
+                            )
+                        }
+                    </tbody>
+                </table>
             </div>
         )
     }

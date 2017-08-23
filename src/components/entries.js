@@ -12,10 +12,6 @@ class Entries extends Component{
             enableEdit: false,
         }
     }
-    componentWillMount() {
-        console.log('entries will mount', this.props);
-    }
-
 
     handleEdit(){
         console.log('edit mode',this);
@@ -51,42 +47,38 @@ class Entries extends Component{
     render(){
         console.log('entries component',this.props);
         const {handleSubmit, error} = this.props;
-        // const { initialValues } = this.props;
-        // // if(!initialValues.length){
-        //     initialValues.push({"name":"","course":"","grade":""});
-        // // }
+
 
 
         return(
-            <div>
+            <tr>
                 {!this.state.enableEdit ? (
-                    <div className="entryContainer" key={this.props.record.id}>
-                        <div className="nameField">{this.props.record.name}</div>
-                        <div className="courseField">{this.props.record.course_name}</div>
-                        <div className="gradeField">{this.props.record.grade}</div>
-                        <div className="optsField">
+                    <tr className="entryContainer" key={this.props.record.id}>
+                        <td className="nameField">{this.props.record.name}</td>
+                        <td className="courseField">{this.props.record.course_name}</td>
+                        <td className="gradeField">{this.props.record.grade}</td>
+                        <td className="optsField">
                             <button type="button" onClick={this.handleEdit.bind(this)}>Edit</button>
                             <button type="button" onClick={this.handleDelete.bind(this)}>Delete</button>
                             <Btn type={"button"} bsStyle={"danger"} cName={"btn"} onClick={this.handleDelete.bind(this)} label={"Delete"}/>
-                        </div>
+                        </td>
 
-                    </div>
+                    </tr>
                 ) : (
-                    <div >
-                        <form key={this.props.record.id} onSubmit={handleSubmit((values) => {this.handleSubmitEntry(values)})}>
-                            <div>
-                                <Field name="name"  val={ this.props.record.name} component={renderInput} />
-                                <Field name="course" val={this.props.record.course_name} component={renderInput} />
-                                <Field name="grade" val={this.props.record.grade} type="number" component={renderInput} />
-                            </div>
-                            <div>
+                    <form key={this.props.record.id} onSubmit={handleSubmit((values) => {this.handleSubmitEntry(values)})}>
+
+                            <td><Field name="name"  val={ this.props.record.name} component={renderInput} /></td>
+                            <td><Field name="course" val={this.props.record.course_name} component={renderInput} /></td>
+                            <td><Field name="grade" val={this.props.record.grade} type="number" component={renderInput} /></td>
+
+                            <td>
                                 <button type="submit" className="btn btn-primary" label="Add" >Submit</button>
                                 <button onClick={this.handleCancelClick.bind(this)} type="button" className="btn btn-danger" label="Clear">Cancel</button>
-                            </div>
-                        </form>
-                    </div>
+                            </td>
+
+                    </form>
                 )}
-            </div>
+            </tr>
         )
     }
 
@@ -104,8 +96,6 @@ function validate(values) {
 
 Entries = reduxForm({
     form: 'edit',
-    initialValues: {"name":"", "course":"", "grade":""},
-    // initialValues: [],
     enableReinitialize: true,
     validate
 })(Entries);
