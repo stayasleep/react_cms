@@ -7,8 +7,6 @@ import {
 } from './type';
 import axios from 'axios';
 
-axios.defaults.headers.post['Content-Type'] = "application/x-www-form-urlencoded";
-
 // const BASE_URL = "../data.php?action=";//works if you use the build html file
 const BASE_URL = "http://localhost:8080/react_cms/data.php?action="; //cross origin issues perhaps
 // const BASE_URL = "http://localhost:3000/data.php?action=";
@@ -29,6 +27,12 @@ export function addRecord(entry){
     return function (dispatch){
         axios.post(`${BASE_URL}insert`,entry ).then((response) => {
             console.log('response back',response);
+            if(response.data.success){
+                dispatch({
+                    type: ADD_RECORD,
+                    payload: true,
+                })
+            }
         }).catch((err) => {
             console.log('is err',err);
         })

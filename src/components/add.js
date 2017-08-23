@@ -8,7 +8,7 @@ import { addStudent, addRecord } from '../actions/index';
 class Add extends Component{
 
     handleAddEntry(values){
-        console.log('am values', values);
+        console.log('am values from add', values);
         this.props.addRecord(values);
         this.props.reset("add");
         //action creator here to send entry objecgt to the server via axios call

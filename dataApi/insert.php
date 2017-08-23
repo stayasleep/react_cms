@@ -8,11 +8,17 @@ if (mysqli_connect_errno()){
     printf("Connect failed: %s\n",mysqli_connect_error());
     exit();
 }
-
+$stuff = $_REQUEST;
+//print_r($stuff);
+$contents= file_get_contents("php://input");
+//print_r($contents);
+$contents = utf8_encode($contents);
+$res = json_decode($contents);
+//print_r($res->{'name'});
 //check if you have all the data you need from the client-side call.
-$name=$_POST['name'];
-$grade=$_POST['grade'];
-$course_name=$_POST['course'];
+$name = $res->{'name'};
+$grade = $res->{'grade'};
+$course_name = $res->{'course'};
 //if not, add an appropriate error to errors
 if(empty($name)){
     $output['errors'][]="Missing Name";

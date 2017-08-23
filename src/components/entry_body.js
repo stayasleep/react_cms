@@ -14,9 +14,10 @@ class EntryBody extends Component{
         console.log('did axios go here',this.props);
     }
 
-    // componentWillReceiveProps(nextProps){
-    //     console.log('next prop yo', nextProps);
-    // }
+    componentWillReceiveProps(nextProps){
+        console.log('next prop yo', nextProps);
+        // this.props.retrieveAll();
+    }
 
     render(){
         console.log('render prop',this.props.entries);
@@ -42,6 +43,7 @@ class EntryBody extends Component{
 function mapStateToProps(state){
     return{
         entries: state.entries.all,
+        allState: state.entries,
     }
 }
 
