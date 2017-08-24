@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import { Field, reduxForm } from 'redux-form';
+import { Grid, Row, Col } from 'react-bootstrap';
 import Entries from './entries';
 import { retrieveAll } from '../actions/index';
 
@@ -26,34 +27,38 @@ class EntryBody extends Component{
 
     render(){
         console.log('render prop',this.props);
-        // const entries = this.props.entries.map((record, index) => {
-        //     return <Entries key={index} formKey={index.toString()} initialValues={record} record={record} position={index} />
-        // });
+        const entries = this.props.entries.map((record, index) => {
+            return <Entries key={index} formKey={index.toString()} initialValues={record} record={record} position={index} />
+        });
         return(
-            <div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Course</th>
-                            <th>Grade</th>
-                            <th>Options</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {this.props.entries.length === 0 ? (
+            <Col sm={9} className="entryList">
+                {this.props.entries.length === 0 ? (
+                        <div className="spinnerContainer">
+                            <div className="holder">
+                                <div className="loader">
+                                    Loading...
+                                </div>
+                            </div>
+                        </div>
+                    ) : (
+                        <table className="table">
+                            <thead>
                                 <tr>
-                                    <td>There are no records in the database, please add some new entries!</td>
+                                    <th>Name</th>
+                                    <th>Course</th>
+                                    <th>Options</th>
                                 </tr>
-                            ) : (
-                                this.props.entries.map((record, index) => {
-                                    return <Entries key={index} formKey={index.toString()} initialValues={record} record={record} position={index} />
-                                })
-                            )
-                        }
-                    </tbody>
-                </table>
-            </div>
+                            </thead>
+                            <tbody>
+                                {/*this.props.entries.map((record, index) => {*/}
+                                    {/*return <Entries key={index} formKey={index.toString()} initialValues={record} record={record} position={index} />*/}
+                                {/*})*/}
+                                {entries}
+                            </tbody>
+                        </table>
+                    )
+                }
+            </Col>
         )
     }
 }

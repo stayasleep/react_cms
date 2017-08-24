@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import { connect } from 'react-redux';
 import { Field, reduxForm } from 'redux-form';
+import { Grid, Row, Col } from 'react-bootstrap';
 import renderInput from './utilities/renderInput';
 import { addStudent, addRecord } from '../actions/index';
 
@@ -18,7 +19,7 @@ class Add extends Component{
         const {error, handleSubmit, reset} = this.props;
 
         return(
-            <div>
+            <Col sm={3} className="addForm">
                 <form onSubmit={handleSubmit((values) => {this.handleAddEntry(values)})}>
                     <div>
                         <Field name="name" label="First and Last Name" component={renderInput} />
@@ -30,7 +31,7 @@ class Add extends Component{
                         <button onClick={reset} type="button" className="btn btn-danger" label="Clear">Clear</button>
                     </div>
                 </form>
-            </div>
+            </Col>
         )
     }
 }

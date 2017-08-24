@@ -1,6 +1,7 @@
 import React from 'react';
-
+import { Grid, Row, Col } from 'react-bootstrap';
 import './App.css';
+import Headers from './components/headers';
 import Add from './components/add';
 import EntryBody from './components/entry_body';
 
@@ -37,9 +38,12 @@ import EntryBody from './components/entry_body';
 // export default connect(mapStateToProps,{retrieveAll})(App);
 
 const App = () => (
-    <div>
-        <Add/>
-        <EntryBody/>
-    </div>
+    <Grid>
+        <Row>
+            <Headers/>
+            <Add/>
+            <EntryBody/>
+        </Row>
+    </Grid>
 );
 export default App;

@@ -50,7 +50,7 @@ class Entries extends Component{
 
 
 
-        return(
+        return (
             <tr>
                 {!this.state.enableEdit ? (
                     <tr className="entryContainer" key={this.props.record.id}>
@@ -60,7 +60,7 @@ class Entries extends Component{
                         <td className="optsField">
                             <button type="button" onClick={this.handleEdit.bind(this)}>Edit</button>
                             <button type="button" onClick={this.handleDelete.bind(this)}>Delete</button>
-                            <Btn type={"button"} bsStyle={"danger"} cName={"btn"} onClick={this.handleDelete.bind(this)} label={"Delete"}/>
+                            {/*<Btn type={"button"} bsStyle={"danger"} cName={"btn"} onClick={this.handleDelete.bind(this)} label={"Delete"}/>*/}
                         </td>
 
                     </tr>
