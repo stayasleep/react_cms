@@ -55,26 +55,28 @@ class Entries extends Component{
                     <span className="td courseField">{this.props.record.course_name}</span>
                     <span className="td gradeField">{this.props.record.grade}</span>
                     <span className="td btnField">
-                        <button type="button" className="btn btn-primary" onClick={this.handleEdit.bind(this)}>Edit</button>
-                        <button type="button" className="btn btn-danger" onClick={this.handleDelete.bind(this)}>Delete</button>
+                        <div className="btnBox">
+                        <button type="button" className="btn edit btn-link" onClick={this.handleEdit.bind(this)}>Edit</button>
+                        <button type="button" className="btn del btn-outline-danger" onClick={this.handleDelete.bind(this)}>Delete</button>
+                        </div>
                     </span>
                 </div>
             )
         }else{
             return (
-                <form className="tr tForm" onSubmit={handleSubmit((values) => {this.handleSubmitEntry(values)})}>
-                    <span className="td">
-                        <Field name="name" val={this.props.record.name} component={renderInput} />
+                <form className="tr tEditForm" onSubmit={handleSubmit((values) => {this.handleSubmitEntry(values)})}>
+                    <span className="td tForm">
+                        <Field className="form-control"  name="name" val={this.props.record.name} component={renderInput} />
                     </span>
-                    <span className="td">
-                        <Field name="course" val={this.props.record.course_name} component={renderInput} />
+                    <span className="td tForm">
+                        <Field className="form-control"  name="course" val={this.props.record.course_name} component={renderInput} />
                     </span>
-                    <span className="td">
-                        <Field name="grade" val={this.props.record.grade} type="number" component={renderInput} />
+                    <span className="td tForm">
+                        <Field className="form-control" name="grade" val={this.props.record.grade} type="number" component={renderInput} />
                     </span>
-                    <span className="td">
-                        <button type="submit" className="btn btn-primary" label="Submit">Submit</button>
-                        <button onClick={this.handleCancelClick.bind(this)} type="button" className="btn btn-danger" label="Cancel">
+                    <span className="td tForm btnBox">
+                        <button type="submit" className="btn edit btn-outline-dark" label="Submit">Submit</button>
+                        <button onClick={this.handleCancelClick.bind(this)} type="button" className="btn del btn-outline-danger" label="Cancel">
                             Cancel
                         </button>
                     </span>

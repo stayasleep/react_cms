@@ -17,6 +17,7 @@ export default (props) => {
                     <small className="avgText">Average: </small>
                 </h3>
             </div>
+            <hr/>
         </Col>
     );
 };

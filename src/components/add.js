@@ -12,25 +12,26 @@ class Add extends Component{
         console.log('am values from add', values);
         this.props.addRecord(values);
         this.props.reset("add");
-        //action creator here to send entry objecgt to the server via axios call
     }
 
     render(){
         const {error, handleSubmit, reset} = this.props;
 
         return(
-            <Col sm={3} className="addForm">
+            <Col sm={3} className="pull-right addForm well">
+                <h4>Add Entry</h4>
                 <form onSubmit={handleSubmit((values) => {this.handleAddEntry(values)})}>
                     <div>
-                        <Field name="name" label="First and Last Name" component={renderInput} />
-                        <Field name="course" label="Course Name" component={renderInput} />
-                        <Field name="grade" label="Course Grade" type="number" component={renderInput} />
+                        <Field className="form-control add-name" name="name" label="First and Last Name" component={renderInput} />
+                        <Field className="form-control course-name" name="course" label="Course Name" component={renderInput} />
+                        <Field className="form-control grade-name" name="grade" label="Course Grade" type="number" component={renderInput} />
                     </div>
                     <div>
-                        <button type="submit" className="btn btn-primary" label="Add" >Add</button>
-                        <button onClick={reset} type="button" className="btn btn-danger" label="Clear">Clear</button>
+                        <button type="submit" className="btn add-group btn-outline-dark" label="Add" >Add</button>
+                        <button onClick={reset} type="button" className="btn add-group btn-outline-info" label="Clear">Clear</button>
                     </div>
                 </form>
+
             </Col>
         )
     }

@@ -30,7 +30,7 @@ class EntryBody extends Component{
         //     return <Entries key={index} formKey={index.toString()} initialValues={record} record={record} position={index} />
         // });
         return(
-            <Col sm={9} className="entryList">
+            <Col sm={9} className="pull-left entryList">
                 <div className="table">
                     <div className="tr thead">
                         <span className="td">Name</span>
@@ -39,7 +39,7 @@ class EntryBody extends Component{
                         <span className="td">Operations</span>
                     </div>
                 </div>
-                <div className="table">
+                <div className="table tbody">
                     {this.props.entries.length === 0 ?
                         (
                             <div className="spinnerContainer">
