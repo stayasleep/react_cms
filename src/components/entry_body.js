@@ -33,14 +33,16 @@ class EntryBody extends Component{
         return(
             <Col xs={12} sm={9} className="pull-left entryList">
                 <div className="table">
-                    <div className="tr thead">
-                        <span className="td">Name</span>
-                        <span className="td">Course</span>
-                        <span className="td">Grade</span>
-                        <span className="td">Operations</span>
+                    <div className="thead">
+                        <div className="tr">
+                            <span className="td">Name</span>
+                            <span className="td">Course</span>
+                            <span className="td">Grade</span>
+                            <span className="td">Operations</span>
+                        </div>
                     </div>
-                </div>
-                <div className="table tbody">
+
+                <div className="tbody">
                     {this.props.entries.length === 0 ?
                         (
                             <div className="spinnerContainer">
@@ -67,6 +69,7 @@ class EntryBody extends Component{
                     /> :
                     null
                 }
+                </div>
             </Col>
         )
     }
