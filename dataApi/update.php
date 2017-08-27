@@ -6,7 +6,6 @@ if (mysqli_connect_errno()){
 $contents = file_get_contents("php://input");
 $contents = utf8_encode($contents);
 $res = json_decode($contents);
-
 $id = $res->{'id'};
 
 if (!ctype_digit($id)) {
@@ -14,7 +13,7 @@ if (!ctype_digit($id)) {
     return;
 }
 $student = $res->{'name'};
-$course = $res->{'course'};
+$course = $res->{'course_name'};
 $grade  = $res->{'grade'};
 
 if (ctype_space($student) || ctype_space($course) || ctype_space($grade)) {
@@ -25,7 +24,7 @@ if (ctype_space($student) || ctype_space($course) || ctype_space($grade)) {
 
 $updateFields = [
     'name' => 'name',
-    'course' => 'course_name',
+    'course_name' => 'course_name',
     'grade' => 'grade'
 ];
 
