@@ -6,8 +6,8 @@ export default function renderInput({className, input, label, type, val, meta: {
         <input
             placeholder={label}
             type={type}
-            value={val}
             className={className}
+            value={val}
             {...input}
 
         />

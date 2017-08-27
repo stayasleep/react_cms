@@ -37,16 +37,6 @@ class Add extends Component{
     }
 }
 
-// function validate(values) {
-//     const errors = {};
-//     const requiredFields = ['name', 'course', 'grade'];
-//     requiredFields.forEach((field) => {
-//         if (!values[field]){
-//             errors[field] = "Required";
-//         }
-//     });
-//     return errors;
-// }
 function validate(values){
     const errors = {};
     if(!values.name){
