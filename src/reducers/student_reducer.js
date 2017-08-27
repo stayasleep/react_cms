@@ -1,5 +1,6 @@
 import {
     ADD_RECORD,
+    ADD_ERROR,
     DEL_RECORD,
     FILTER_RECORDS,
     UPD_RECORD,
@@ -12,6 +13,8 @@ export default function(state = defaultState, action){
     switch (action.type){
         case ADD_RECORD:
             return {...state, add: action.payload};
+        case ADD_ERROR:
+            return {...state,error: true };
         case RETR_RECORDS:
             console.log('retrieve reduce',action.payload);
             return {all: action.payload};

@@ -4,6 +4,7 @@ import { Field, reduxForm } from 'redux-form';
 import { Grid, Row, Col } from 'react-bootstrap';
 import Entries from './entries';
 import { retrieveAll } from '../actions/index';
+import Confirm from './confirmation';
 
 
 class EntryBody extends Component{
@@ -56,6 +57,16 @@ class EntryBody extends Component{
                         )
                     }
                 </div>
+                {this.props.allState.error ?
+                    <Confirm
+                        action="Error"
+                        warn="Action Cannot Be Completed"
+                        show={true}
+                        onClick={() => this.handleConfirm.bind(this)}
+                        onCancel={() => this.handleCancel.bind(this)}
+                    /> :
+                    null
+                }
             </Col>
         )
     }

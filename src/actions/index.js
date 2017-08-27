@@ -1,5 +1,6 @@
 import {
     ADD_RECORD,
+    ADD_ERROR,
     DEL_RECORD,
     UPD_RECORD,
     RETR_RECORDS,
@@ -22,8 +23,6 @@ export function addStudent(entry){
     }
 }
 export function addRecord(entry){
-    console.log('add record',entry);
-    let newEntry = JSON.stringify(entry);
     return function (dispatch){
         axios.post(`${BASE_URL}insert`,entry ).then((response) => {
             console.log('response back',response);
@@ -32,9 +31,14 @@ export function addRecord(entry){
                     type: ADD_RECORD,
                     payload: true,
                 })
+            }else if(!response.data.success){
+                dispatch({
+                    type: ADD_ERROR,
+                    payload: response.data.errors
+                })
             }
         }).catch((err) => {
-            console.log('is err',err);
+            console.log('is add err',err);
         })
     }
 }

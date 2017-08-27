@@ -9,14 +9,13 @@ import { addRecord } from '../actions/index';
 class Add extends Component{
 
     handleAddEntry(values){
-        console.log('am values from add', values);
         this.props.addRecord(values);
         this.props.reset("add");
     }
 
     render(){
         const { handleSubmit, pristine, submitting, reset } = this.props;
-        console.log ('add prop',this.props);
+        console.log ('add propzz',this.props);
         return(
             <Col xs={12} sm={3} className="pull-right addForm well">
                 <h4>Add Entry</h4>
@@ -27,8 +26,8 @@ class Add extends Component{
                         <Field className="form-control grade-name" name="grade" label="Course Grade" type="number" component={renderInput} />
                     </div>
                     <div>
-                        <button type="submit" className="btn add-group btn-outline-dark" label="Add" disabled={submitting} >Add</button>
-                        <button onClick={reset} type="button" className="btn add-group btn-outline-info" label="Clear" disabled={pristine || submitting} >Clear</button>
+                        <button type="submit" className="btn btn-lg add-group btn-outline-dark" label="Add" disabled={submitting} >Add</button>
+                        <button onClick={reset} type="button" className="btn btn-lg add-group btn-outline-info" label="Clear" disabled={pristine || submitting} >Clear</button>
                     </div>
                 </form>
 
