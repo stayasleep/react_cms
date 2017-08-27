@@ -10,22 +10,17 @@ class Entries extends Component{
         super(props);
         this.state={
             enableEdit: false,
+            name: this.props.record.name,
+            course: this.props.record.course_name,
+            grade: this.props.record.grade,
         }
     }
 
     handleEdit(){
         console.log('edit mode',this);
 
-        // const {name, course_name, grade} = this.props.entries[this.props.position];
-        // this.props.initialValues.name = name;
-        // this.props.initialValues.course_name =course_name;
-        // this.props.initialValues.grade = grade;
         this.setState({
             enableEdit: !this.state.enableEdit,
-            name: this.props.record.name,
-            course: this.props.record.course_name,
-            grade: this.props.record.grade,
-
         });
     }
     handleDelete(){
@@ -44,13 +39,18 @@ class Entries extends Component{
         })
     }
     handleCancelClick(){
-        const {name, course_name, grade} = this.props.entries[this.props.position];
+        // const {name, course_name, grade} = this.props.entries[this.props.position];
+        // this.props.initialValues.name = name;
+        // this.props.initialValues.course_name = course_name;
+        // this.props.initialValues.grade = grade;
+
         this.setState({
             enableEdit: !this.state.enableEdit,
-            name: name,
-            course: course_name,
-            grade: grade,
+            // name: name,
+            // course: course_name,
+            // grade: grade,
         });
+        this.props.reset("edit");
     }
 
     render(){
@@ -92,37 +92,6 @@ class Entries extends Component{
                 </form>
             )
         }
-
-        // if(!this.state.enableEdit){
-        //     return (
-        //         <tr className="entryContainer" key={this.props.record.id}>
-        //             <td className="nameField">{this.props.record.name}</td>
-        //             <td className="courseField">{this.props.record.course_name}</td>
-        //             <td className="gradeField">{this.props.record.grade}</td>
-        //             <td className="optsField">
-        //                 <button type="button" className="btn btn-primary" onClick={this.handleEdit.bind(this)}>Edit</button>
-        //                 <button type="button" className="btn btn-danger" onClick={this.handleDelete.bind(this)}>Delete</button>
-        //                 {/*<Btn type={"button"} bsStyle={"danger"} cName={"btn"} onClick={this.handleDelete.bind(this)} label={"Delete"}/>*/}
-        //             </td>
-        //         </tr>
-        //     )
-        // } else {
-        //     return (
-        //         <tr>
-        //         <form key={this.props.record.id} onSubmit={handleSubmit((values) => {this.handleSubmitEntry(values)})}>
-        //             <td><Field name="name" val={ this.props.record.name} component={renderInput}/></td>
-        //             <td><Field name="course" val={this.props.record.course_name} component={renderInput}/></td>
-        //             <td><Field name="grade" val={this.props.record.grade} type="number" component={renderInput}/></td>
-        //             <td>
-        //                 <button type="submit" className="btn btn-primary" label="Add">Submit</button>
-        //                 <button onClick={this.handleCancelClick.bind(this)} type="button" className="btn btn-danger"
-        //                         label="Clear">Cancel
-        //                 </button>
-        //             </td>
-        //         </form>
-        //         </tr>
-        //     )
-        // }
     }
 }
 
@@ -136,13 +105,13 @@ function validate(values){
         errors.name = "Name must be 20 characters or less";
     }
 
-    if(!values.course){
-        errors.course = "Required";
-    } else if(!/^([a-zA-Z0-9 :\-.'"]+){2,40}$/g.test(values.course)){
-        if(values.course.length <= 2){
-            errors.course = "Course must contain at least 3 characters.";
-        }else{
-            errors.course = "Course must be 40 characters or fewer.";
+    if(!values.course_name){
+        errors.course_name = "Required";
+    } else if(!/^([a-zA-Z0-9 :\-.'"]+){2,40}$/g.test(values.course_name)){
+        if(values.course_name.length <= 2){
+            errors.course_name = "Course must contain at least 3 characters.";
+        }else if(values.course_name.length >40){
+            errors.course_name = "Course must be 40 characters or fewer.";
         }
     }
 
@@ -161,6 +130,7 @@ function validate(values){
 Entries = reduxForm({
     form: 'edit',
     enableReinitialize: true,
+    overwriteOnInitialValuesChange: false,
     validate
 })(Entries);
 

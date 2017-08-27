@@ -15,10 +15,10 @@ class Add extends Component{
     }
 
     render(){
-        const {error, handleSubmit, reset} = this.props;
-
+        const {error, handleSubmit, pristine, submitting, reset} = this.props;
+        console.log ('add prop',this.props);
         return(
-            <Col sm={3} className="pull-right addForm well">
+            <Col xs={12} sm={3} className="pull-right addForm well">
                 <h4>Add Entry</h4>
                 <form onSubmit={handleSubmit((values) => {this.handleAddEntry(values)})}>
                     <div>
@@ -27,8 +27,8 @@ class Add extends Component{
                         <Field className="form-control grade-name" name="grade" label="Course Grade" type="number" component={renderInput} />
                     </div>
                     <div>
-                        <button type="submit" className="btn add-group btn-outline-dark" label="Add" >Add</button>
-                        <button onClick={reset} type="button" className="btn add-group btn-outline-info" label="Clear">Clear</button>
+                        <button type="submit" className="btn add-group btn-outline-dark" label="Add" disabled={submitting} >Add</button>
+                        <button onClick={reset} type="button" className="btn add-group btn-outline-info" label="Clear" disabled={pristine || submitting} >Clear</button>
                     </div>
                 </form>
 
