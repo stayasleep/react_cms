@@ -1,9 +1,9 @@
 import React,{Component} from 'react';
 import { connect } from 'react-redux';
 import { Field, reduxForm } from 'redux-form';
-import { Grid, Row, Col } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
 import renderInput from './utilities/renderInput';
-import { addStudent, addRecord } from '../actions/index';
+import { addRecord } from '../actions/index';
 
 
 class Add extends Component{
@@ -15,7 +15,7 @@ class Add extends Component{
     }
 
     render(){
-        const {error, handleSubmit, pristine, submitting, reset} = this.props;
+        const { handleSubmit, pristine, submitting, reset } = this.props;
         console.log ('add prop',this.props);
         return(
             <Col xs={12} sm={3} className="pull-right addForm well">

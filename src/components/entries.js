@@ -3,32 +3,57 @@ import {Field, reduxForm} from 'redux-form';
 import {connect} from 'react-redux';
 import renderInput from './utilities/renderInput';
 import { updateEntry, deleteEntry } from '../actions/index';
-import Btn from './utilities/buttons';
+import Confirm from './confirmation';
+
 
 class Entries extends Component{
     constructor(props){
         super(props);
         this.state={
             enableEdit: false,
+            enableDelete: false,
             name: this.props.record.name,
             course: this.props.record.course_name,
             grade: this.props.record.grade,
         }
     }
 
-    handleEdit(){
-        console.log('edit mode',this);
-
-        this.setState({
-            enableEdit: !this.state.enableEdit,
-        });
+    renderDelete(){
+        return (!this.state.enableDelete ?
+            (
+                null
+            ) : (
+                <Confirm
+                    action="Confirm Delete?"
+                    warn="Action cannot be undone if confirmed"
+                    show={this.state.enableDelete}
+                    entry = {this.props.record}
+                    onClick={() => this.handleDelete.bind(this)}
+                    onCancel={() => this.handleCancelDelete.bind(this)}
+                />
+            )
+        )
+    }
+    handleDeleteOption(){
+        this.setState({enableDelete: !this.state.enableDelete});
+    }
+    handleCancelDelete(){
+        this.setState({enableDelete: !this.state.enableDelete});
     }
     handleDelete(){
         const deleteID = {"id": this.props.record.id};
         console.log('am doin a deletin',this.props.record);
         this.props.deleteEntry(deleteID);
-
+        this.setState({enableDelete: !this.state.enableDelete});
     }
+
+    handleEdit(){
+        console.log('edit mode',this);
+        this.setState({
+            enableEdit: !this.state.enableEdit,
+        });
+    }
+
     handleSubmitEntry(values){
         let edited = {...values, "id":this.props.record.id};
 
@@ -39,16 +64,8 @@ class Entries extends Component{
         })
     }
     handleCancelClick(){
-        // const {name, course_name, grade} = this.props.entries[this.props.position];
-        // this.props.initialValues.name = name;
-        // this.props.initialValues.course_name = course_name;
-        // this.props.initialValues.grade = grade;
-
         this.setState({
             enableEdit: !this.state.enableEdit,
-            // name: name,
-            // course: course_name,
-            // grade: grade,
         });
         this.props.reset("edit");
     }
@@ -65,10 +82,11 @@ class Entries extends Component{
                     <span className="td gradeField">{this.props.record.grade}</span>
                     <span className="td btnField">
                         <div className="btnBox">
-                        <button type="button" className="btn edit btn-link" onClick={this.handleEdit.bind(this)}>Edit</button>
-                        <button type="button" className="btn del btn-outline-danger" onClick={this.handleDelete.bind(this)}>Delete</button>
+                            <button type="button" className="btn edit btn-link" onClick={this.handleEdit.bind(this)}>Edit</button>
+                            <button type="button" className="btn del btn-outline-danger" onClick={this.handleDeleteOption.bind(this)}>Delete</button>
                         </div>
                     </span>
+                    {this.renderDelete()}
                 </div>
             )
         }else{
@@ -142,4 +160,3 @@ function mapStateToProps(state, ownProps){
 }
 
 export default connect(mapStateToProps,{ updateEntry, deleteEntry })(Entries);
-// export default Entries;

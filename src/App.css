@@ -183,3 +183,9 @@ SPAN.td
 {
     display:table-cell;
 }
+.modBox{
+    text-align: center;
+}
+.modalText{
+    font-style: italic;
+}

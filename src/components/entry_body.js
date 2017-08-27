@@ -30,7 +30,7 @@ class EntryBody extends Component{
         //     return <Entries key={index} formKey={index.toString()} initialValues={record} record={record} position={index} />
         // });
         return(
-            <Col sm={9} className="pull-left entryList">
+            <Col xs={12} sm={9} className="pull-left entryList">
                 <div className="table">
                     <div className="tr thead">
                         <span className="td">Name</span>
