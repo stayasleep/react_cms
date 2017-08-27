@@ -42,7 +42,6 @@ class Entries extends Component{
     }
     handleDelete(){
         const deleteID = {"id": this.props.record.id};
-        console.log('am doin a deletin',this.props.record);
         this.props.deleteEntry(deleteID);
         this.setState({enableDelete: !this.state.enableDelete});
     }
@@ -56,8 +55,6 @@ class Entries extends Component{
 
     handleSubmitEntry(values){
         let edited = {...values, "id":this.props.record.id};
-
-        console.log('submitted vals',edited);
         this.props.updateEntry(edited);
         this.setState({
             enableEdit: !this.state.enableEdit,
@@ -71,8 +68,7 @@ class Entries extends Component{
     }
 
     render(){
-        console.log('entries component',this.props);
-        const {handleSubmit, error} = this.props;
+        const {handleSubmit } = this.props;
 
         if(!this.state.enableEdit){
             return (

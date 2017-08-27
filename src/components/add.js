@@ -15,7 +15,6 @@ class Add extends Component{
 
     render(){
         const { handleSubmit, pristine, submitting, reset } = this.props;
-        console.log ('add propzz',this.props);
         return(
             <Col xs={12} sm={3} className="pull-right addForm well">
                 <h4>Add Entry</h4>

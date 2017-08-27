@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import { Field, reduxForm } from 'redux-form';
-import { Grid, Row, Col } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
 import Entries from './entries';
 import { retrieveAll, resetErrors } from '../actions/index';
 import ErrorModal from './error_modal';
@@ -9,31 +8,24 @@ import ErrorModal from './error_modal';
 class EntryBody extends Component{
 
     componentWillMount(){
-        console.log('will axios go here',this.props);
         this.props.retrieveAll();
     };
 
     componentWillReceiveProps(nextProps){
-        console.log('next prop yo', nextProps);
-        console.log('this next prop',this.props);
         if(nextProps.allState.add){
             this.props.retrieveAll();
         }else if(nextProps.allState.del){
             this.props.retrieveAll();
         }else if(nextProps.allState.upd){
             this.props.retrieveAll();
-        }else if(nextProps.allState.error){
-            // this.props.resetErrors();
-            console.log('reset the erro');
         }
     }
+
     handleCancel(){
         this.props.resetErrors();
     }
 
     render(){
-        console.log('render prop',this.props);
-
         return(
             <Col xs={12} sm={9} className="pull-left entryList">
                 <div className="table">
@@ -57,9 +49,16 @@ class EntryBody extends Component{
                                 </div>
                             </div>
                         ) : (
-                            this.props.entries.map((record, index) => {
-                                return <Entries key={index} formKey={index.toString()} initialValues={record} record={record} position={index} />
-                            })
+                            this.props.entries.length === 0 ?
+                                (
+                                    <div style={{paddingTop: "16px"}}>
+                                        No entries in the database.  Please add some entries!
+                                    </div>
+                                ) : (
+                                    this.props.entries.map((record, index) => {
+                                        return <Entries key={index} formKey={index.toString()} initialValues={record} record={record} position={index} />
+                                    })
+                                )
                         )
                     }
                 </div>

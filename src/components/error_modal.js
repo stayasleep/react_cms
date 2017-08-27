@@ -13,7 +13,7 @@ const ErrorModal = (props) => {
                     <p className="modalText">Message: {props.errs}</p>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button bsStyle="danger" className="btn-outline-danger" onClick={props.onCancel()}>Cancel</Button>
+                    <Button bsStyle="danger" className="btn-outline-danger" onClick={props.onCancel()}>Ok</Button>
                 </Modal.Footer>
             </Modal>
         </div>

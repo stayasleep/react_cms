@@ -2,7 +2,6 @@ import React from 'react';
 import { Button, Modal } from 'react-bootstrap';
 
 const Confirm = (props) => {
-    console.log('am made confirm',props);
     return(
         <div>
             <Modal className="modBox" show = {props.show} onHide={props.onCancel()} >

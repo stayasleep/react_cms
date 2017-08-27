@@ -18,7 +18,6 @@ class Headers extends Component{
     }
 
     render(){
-        console.log('head prop.',this.props);
 
         return(
             <Col>
@@ -38,7 +37,7 @@ class Headers extends Component{
             </Col>
         )
     }
-};
+}
 
 function mapStateToProps(state){
     return{

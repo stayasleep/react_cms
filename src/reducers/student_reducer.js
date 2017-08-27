@@ -19,7 +19,6 @@ export default function(state = defaultState, action){
         case ADD_ERROR:
             return {...state,error: true };
         case RETR_RECORDS:
-            console.log('retrieve reduce',action.payload);
             return {all: action.payload};
         case UPD_RECORD:
             return {...state, upd: action.payload};
