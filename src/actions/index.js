@@ -18,7 +18,6 @@ const BASE_URL = "http://localhost:8080/react_cms/data.php?action="; //testing
 export function addRecord(entry){
     return function (dispatch){
         axios.post(`${BASE_URL}insert`,entry ).then((response) => {
-            console.log('response back',response);
             if(response.data.success){
                 dispatch({
                     type: ADD_RECORD,
@@ -37,11 +36,9 @@ export function addRecord(entry){
 }
 
 //this function should be fired off upon load
-//and should be used every time you C/U/D
 export function retrieveAll(){
     return function(dispatch){
         axios.post(`${BASE_URL}readAll`).then((response) => {
-            console.log('retrieve all axios',response);
             if(response.data.success){
                 dispatch({
                     type: RETR_RECORDS,
