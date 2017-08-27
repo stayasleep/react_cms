@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="315a24ce-f6cd-4189-a98b-0529a50f50c9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.css" afterPath="$PROJECT_DIR$/src/App.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/add.js" afterPath="$PROJECT_DIR$/src/components/add.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/entries.js" afterPath="$PROJECT_DIR$/src/components/entries.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/entry_body.js" afterPath="$PROJECT_DIR$/src/components/entry_body.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/headers.js" afterPath="$PROJECT_DIR$/src/components/headers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/utilities/renderInput.js" afterPath="$PROJECT_DIR$/src/components/utilities/renderInput.js" />
     </list>
@@ -21,7 +19,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5680645">
+    <splitter split-orientation="horizontal" split-proportion="0.6896774">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
           <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
@@ -37,8 +35,8 @@
           <file leaf-file-name="headers.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/headers.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="760">
-                  <caret line="19" column="17" lean-forward="false" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+                <state relative-caret-position="600">
+                  <caret line="15" column="43" lean-forward="false" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -46,7 +44,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="entry_body.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="entry_body.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/entry_body.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="80">
@@ -97,21 +95,9 @@
           <file leaf-file-name="renderInput.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/utilities/renderInput.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="80">
-                  <caret line="2" column="48" lean-forward="false" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
+                <state relative-caret-position="560">
+                  <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
                   <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="add.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/add.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="669">
-                  <caret line="30" column="103" lean-forward="false" selection-start-line="30" selection-start-column="103" selection-end-line="30" selection-end-column="103" />
-                  <folding>
-                    <element signature="e#0#38#0" expanded="true" />
-                  </folding>
                 </state>
               </provider>
             </entry>
@@ -148,11 +134,23 @@
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="add.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/components/add.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="873">
+                  <caret line="75" column="5" lean-forward="false" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+                  <folding>
+                    <element signature="e#0#38#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
         </leaf>
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-          <file leaf-file-name="App.css" pinned="false" current-in-tab="true">
+          <file leaf-file-name="App.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/App.css">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="800">
@@ -186,10 +184,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="insert.php" pinned="false" current-in-tab="false">
+          <file leaf-file-name="insert.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/dataApi/insert.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="353">
+                <state relative-caret-position="-1351">
                   <caret line="13" column="30" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
                   <folding>
                     <marker date="1503473380993" expanded="true" signature="1567:1639" ph="INSERT INTO `student_data`... " />
@@ -258,12 +256,12 @@
         <option value="$PROJECT_DIR$/src/actions/index.js" />
         <option value="$PROJECT_DIR$/src/components/confirmation.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/components/utilities/renderInput.js" />
         <option value="$PROJECT_DIR$/src/components/entry_body.js" />
-        <option value="$PROJECT_DIR$/src/components/headers.js" />
-        <option value="$PROJECT_DIR$/src/components/add.js" />
         <option value="$PROJECT_DIR$/src/components/entries.js" />
         <option value="$PROJECT_DIR$/src/App.css" />
+        <option value="$PROJECT_DIR$/src/components/headers.js" />
+        <option value="$PROJECT_DIR$/src/components/utilities/renderInput.js" />
+        <option value="$PROJECT_DIR$/src/components/add.js" />
       </list>
     </option>
   </component>
@@ -468,12 +466,12 @@
       <option name="presentableId" value="Default" />
       <updated>1503283603119</updated>
       <workItem from="1503283604753" duration="28772000" />
-      <workItem from="1503360512876" duration="80357000" />
+      <workItem from="1503360512876" duration="84035000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109129000" />
+    <option name="totallyTimeSpent" value="112807000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-16" y="-16" width="3232" height="1732" extended-state="6" />
@@ -739,24 +737,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/reducers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataApi/insert.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="13" column="30" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <marker date="1503473380993" expanded="true" signature="1567:1639" ph="INSERT INTO `student_data`... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dataApi/update.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -787,14 +767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-659">
-          <caret line="3" column="14" lean-forward="false" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/confirmation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -815,34 +787,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/utilities/renderInput.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="2" column="48" lean-forward="false" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/headers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="19" column="17" lean-forward="false" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/add.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="669">
-          <caret line="30" column="103" lean-forward="false" selection-start-line="30" selection-start-column="103" selection-end-line="30" selection-end-column="103" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/entries.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="772">
@@ -850,6 +794,14 @@
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="800">
+          <caret line="65" column="25" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -863,11 +815,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.css">
+    <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="65" column="25" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+        <state relative-caret-position="-659">
+          <caret line="3" column="14" lean-forward="false" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="14" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/headers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="15" column="43" lean-forward="false" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataApi/insert.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1351">
+          <caret line="13" column="30" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <marker date="1503473380993" expanded="true" signature="1567:1639" ph="INSERT INTO `student_data`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/utilities/renderInput.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/add.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="873">
+          <caret line="75" column="5" lean-forward="false" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

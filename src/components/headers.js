@@ -7,14 +7,14 @@ export default (props) => {
         <Col>
             <div className="hidden-xs">
                 <h1>
-                    CryptoCurrency Management Logger
-                    <small className="avgText">Average: </small>
+                    Grade Management System
+                    <small className="avgText pull-right">Average: <span className="label label-default">3</span></small>
                 </h1>
             </div>
             <div className="hidden-sm hidden-md hidden-lg">
                 <h3>
-                    CryptoCurrency Management Logger
-                    <small className="avgText">Average: </small>
+                    Grade Management System
+                    <small className="avgText">Average: <span className="label label-default"></span></small>
                 </h3>
             </div>
             <hr/>

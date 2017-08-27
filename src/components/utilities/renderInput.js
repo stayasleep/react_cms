@@ -2,6 +2,7 @@ import React from 'react';
 
 export default function renderInput({className, input, label, type, val, meta: {active, dirty, touched, error}}){
     return(
+        <div>
         <input
             placeholder={label}
             type={type}
@@ -10,5 +11,8 @@ export default function renderInput({className, input, label, type, val, meta: {
             {...input}
 
         />
+        {touched && (error && <span>{error}</span>)}
+        </div>
+
     )
 }

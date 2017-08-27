@@ -37,14 +37,44 @@ class Add extends Component{
     }
 }
 
-function validate(values) {
+// function validate(values) {
+//     const errors = {};
+//     const requiredFields = ['name', 'course', 'grade'];
+//     requiredFields.forEach((field) => {
+//         if (!values[field]){
+//             errors[field] = "Required";
+//         }
+//     });
+//     return errors;
+// }
+function validate(values){
     const errors = {};
-    const requiredFields = ['name', 'course', 'grade'];
-    requiredFields.forEach((field) => {
-        if (!values[field]){
-            errors[field] = "Required";
+    if(!values.name){
+        errors.name = "Required";
+    }else if(values.name.length <= 2){
+        errors.name = "Name must be at least 3 characters";
+    }else if(values.name.length > 20 ){
+        errors.name = "Name must be 20 characters or less";
+    }
+
+    if(!values.course){
+        errors.course = "Required";
+    } else if(!/^([a-zA-Z0-9 :\-.'"]+){2,40}$/g.test(values.course)){
+        if(values.course.length <= 2){
+            errors.course = "Course must contain at least 3 characters.";
+        }else{
+            errors.course = "Course must be 40 characters or fewer.";
         }
-    });
+    }
+
+    if(!values.grade) {
+        errors.grade = "Required";
+    } else if(values.grade < 1 ){
+        errors.grade = "Grade must be greater than zero (0).";
+    } else if(!/^0*(?:[1-9][0-9]?|100)$/g.test(values.grade)){
+        errors.grade = "Please enter a whole number only";
+    }
+
     return errors;
 }
 
