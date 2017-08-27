@@ -3,11 +3,17 @@ import { connect } from 'react-redux';
 import { Field, reduxForm } from 'redux-form';
 import { Grid, Row, Col } from 'react-bootstrap';
 import Entries from './entries';
-import { retrieveAll } from '../actions/index';
-import Confirm from './confirmation';
-
+import { retrieveAll, resetErrors } from '../actions/index';
+import ErrorModal from './error_modal';
 
 class EntryBody extends Component{
+    constructor(props){
+        super(props);
+        this.state={
+            errModal: false,
+        }
+    }
+
     componentWillMount(){
         console.log('will axios go here',this.props);
         this.props.retrieveAll();
@@ -22,14 +28,19 @@ class EntryBody extends Component{
             this.props.retrieveAll();
         }else if(nextProps.allState.upd){
             this.props.retrieveAll();
+        }else if(nextProps.allState.error){
+            // this.props.resetErrors();
+            console.log('reset the erro');
         }
+    }
+    handleCancel(){
+        this.setState({errModal: !this.state.errModal});
+        this.props.resetErrors();
     }
 
     render(){
         console.log('render prop',this.props);
-        // const entries = this.props.entries.map((record, index) => {
-        //     return <Entries key={index} formKey={index.toString()} initialValues={record} record={record} position={index} />
-        // });
+
         return(
             <Col xs={12} sm={9} className="pull-left entryList">
                 <div className="table">
@@ -43,7 +54,7 @@ class EntryBody extends Component{
                     </div>
 
                 <div className="tbody">
-                    {this.props.entries.length === 0 ?
+                    {this.props.allState.loading ?
                         (
                             <div className="spinnerContainer">
                                 <div className="holder">
@@ -60,11 +71,11 @@ class EntryBody extends Component{
                     }
                 </div>
                 {this.props.allState.error ?
-                    <Confirm
+                    <ErrorModal
                         action="Error"
-                        warn="Action Cannot Be Completed"
-                        show={true}
-                        onClick={() => this.handleConfirm.bind(this)}
+                        warn="Network cannot process your request at this time."
+                        errs="Please notify database admin"
+                        show={!this.state.errModal}
                         onCancel={() => this.handleCancel.bind(this)}
                     /> :
                     null
@@ -81,4 +92,4 @@ function mapStateToProps(state){
     }
 }
 
-export default connect(mapStateToProps,{ retrieveAll })(EntryBody);
+export default connect(mapStateToProps,{ retrieveAll, resetErrors })(EntryBody);

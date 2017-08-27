@@ -5,9 +5,10 @@ import {
     FILTER_RECORDS,
     UPD_RECORD,
     RETR_RECORDS,
+    RESET_ERRS,
 
 } from '../actions/type';
-const defaultState = {all:[], error: null};
+const defaultState = {all:[], error: null, loading: true};
 
 export default function(state = defaultState, action){
     switch (action.type){
@@ -22,6 +23,8 @@ export default function(state = defaultState, action){
             return {...state, upd: action.payload};
         case DEL_RECORD:
             return {...state, del: action.payload};
+        case RESET_ERRS:
+            return{...state, error: action.payload};
         default:
             return state;
     }

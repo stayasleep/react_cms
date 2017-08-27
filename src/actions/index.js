@@ -4,6 +4,7 @@ import {
     DEL_RECORD,
     UPD_RECORD,
     RETR_RECORDS,
+    RESET_ERRS,
     FILTER_RECORDS,
 } from './type';
 import axios from 'axios';
@@ -86,4 +87,11 @@ export function deleteEntry(id){
         })
     };
 
+}
+
+export function resetErrors(){
+    return{
+        type: RESET_ERRS,
+        payload: null,
+    }
 }

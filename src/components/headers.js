@@ -31,7 +31,7 @@ class Headers extends Component{
                 <div className="hidden-sm hidden-md hidden-lg">
                     <h3>
                         Grade Management System
-                        <small className="avgText">Average: <span className="label label-default">{this.doMath()}%</span></small>
+                        <small className="avgText pull-right">Average: <span className="label label-default">{this.doMath()}%</span></small>
                     </h3>
                 </div>
                 <hr/>
