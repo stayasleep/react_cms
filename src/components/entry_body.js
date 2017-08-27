@@ -7,12 +7,6 @@ import { retrieveAll, resetErrors } from '../actions/index';
 import ErrorModal from './error_modal';
 
 class EntryBody extends Component{
-    constructor(props){
-        super(props);
-        this.state={
-            errModal: false,
-        }
-    }
 
     componentWillMount(){
         console.log('will axios go here',this.props);
@@ -34,7 +28,6 @@ class EntryBody extends Component{
         }
     }
     handleCancel(){
-        this.setState({errModal: !this.state.errModal});
         this.props.resetErrors();
     }
 
@@ -75,7 +68,7 @@ class EntryBody extends Component{
                         action="Error"
                         warn="Network cannot process your request at this time."
                         errs="Please notify database admin"
-                        show={!this.state.errModal}
+                        show={this.props.allState.error}
                         onCancel={() => this.handleCancel.bind(this)}
                     /> :
                     null

@@ -2,7 +2,9 @@ import {
     ADD_RECORD,
     ADD_ERROR,
     DEL_RECORD,
+    DEL_ERRS,
     UPD_RECORD,
+    UPD_ERRS,
     RETR_RECORDS,
     RESET_ERRS,
     FILTER_RECORDS,
@@ -69,6 +71,11 @@ export function updateEntry(updateObj){
                     type: UPD_RECORD,
                     payload: response.data.success,
                 })
+            }else{
+                dispatch({
+                    type: UPD_ERRS,
+                    payload: response.data.errors,
+                })
             }
         })
     }
@@ -82,6 +89,11 @@ export function deleteEntry(id){
                 dispatch({
                     type: DEL_RECORD,
                     payload:response.data.success,
+                })
+            }else{
+                dispatch({
+                    type: DEL_ERRS,
+                    payload: response.data.errors
                 })
             }
         })

@@ -14,9 +14,9 @@ $contents = utf8_encode($contents);
 $res = json_decode($contents);
 //print_r($res->{'name'});
 //check if you have all the data you need from the client-side call.
-$name = $res->{'names'};
-$grade = $res->{'grades'};
-$course_name = $res->{'courses'};
+$name = $res->{'name'};
+$grade = $res->{'grade'};
+$course_name = $res->{'course'};
 //if not, add an appropriate error to errors
 if(empty($name)){
     $output['errors'][]="Missing Name";
