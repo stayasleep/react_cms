@@ -15,7 +15,6 @@ class EntryBody extends Component{
     componentWillReceiveProps(nextProps){
         console.log('next prop yo', nextProps);
         console.log('this next prop',this.props);
-        console.log('it exist',this.props.allState.add);
         if(nextProps.allState.add){
             this.props.retrieveAll();
         }else if(nextProps.allState.del){
@@ -27,37 +26,36 @@ class EntryBody extends Component{
 
     render(){
         console.log('render prop',this.props);
-        const entries = this.props.entries.map((record, index) => {
-            return <Entries key={index} formKey={index.toString()} initialValues={record} record={record} position={index} />
-        });
+        // const entries = this.props.entries.map((record, index) => {
+        //     return <Entries key={index} formKey={index.toString()} initialValues={record} record={record} position={index} />
+        // });
         return(
             <Col sm={9} className="entryList">
-                {this.props.entries.length === 0 ? (
-                        <div className="spinnerContainer">
-                            <div className="holder">
-                                <div className="loader">
-                                    Loading...
+                <div className="table">
+                    <div className="tr thead">
+                        <span className="td">Name</span>
+                        <span className="td">Course</span>
+                        <span className="td">Grade</span>
+                        <span className="td">Operations</span>
+                    </div>
+                </div>
+                <div className="table">
+                    {this.props.entries.length === 0 ?
+                        (
+                            <div className="spinnerContainer">
+                                <div className="holder">
+                                    <div className="loader">
+                                        Loading...
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ) : (
-                        <table className="table">
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Course</th>
-                                    <th>Options</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {/*this.props.entries.map((record, index) => {*/}
-                                    {/*return <Entries key={index} formKey={index.toString()} initialValues={record} record={record} position={index} />*/}
-                                {/*})*/}
-                                {entries}
-                            </tbody>
-                        </table>
-                    )
-                }
+                        ) : (
+                            this.props.entries.map((record, index) => {
+                                return <Entries key={index} formKey={index.toString()} initialValues={record} record={record} position={index} />
+                            })
+                        )
+                    }
+                </div>
             </Col>
         )
     }

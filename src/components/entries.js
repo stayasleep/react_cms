@@ -48,40 +48,71 @@ class Entries extends Component{
         console.log('entries component',this.props);
         const {handleSubmit, error} = this.props;
 
+        if(!this.state.enableEdit){
+            return (
+                <div className="tr tEntry">
+                    <span className="td nameField">{this.props.record.name}</span>
+                    <span className="td courseField">{this.props.record.course_name}</span>
+                    <span className="td gradeField">{this.props.record.grade}</span>
+                    <span className="td btnField">
+                        <button type="button" className="btn btn-primary" onClick={this.handleEdit.bind(this)}>Edit</button>
+                        <button type="button" className="btn btn-danger" onClick={this.handleDelete.bind(this)}>Delete</button>
+                    </span>
+                </div>
+            )
+        }else{
+            return (
+                <form className="tr tForm" onSubmit={handleSubmit((values) => {this.handleSubmitEntry(values)})}>
+                    <span className="td">
+                        <Field name="name" val={this.props.record.name} component={renderInput} />
+                    </span>
+                    <span className="td">
+                        <Field name="course" val={this.props.record.course_name} component={renderInput} />
+                    </span>
+                    <span className="td">
+                        <Field name="grade" val={this.props.record.grade} type="number" component={renderInput} />
+                    </span>
+                    <span className="td">
+                        <button type="submit" className="btn btn-primary" label="Submit">Submit</button>
+                        <button onClick={this.handleCancelClick.bind(this)} type="button" className="btn btn-danger" label="Cancel">
+                            Cancel
+                        </button>
+                    </span>
+                </form>
+            )
+        }
 
-
-        return (
-            <tr>
-                {!this.state.enableEdit ? (
-                    <tr className="entryContainer" key={this.props.record.id}>
-                        <td className="nameField">{this.props.record.name}</td>
-                        <td className="courseField">{this.props.record.course_name}</td>
-                        <td className="gradeField">{this.props.record.grade}</td>
-                        <td className="optsField">
-                            <button type="button" onClick={this.handleEdit.bind(this)}>Edit</button>
-                            <button type="button" onClick={this.handleDelete.bind(this)}>Delete</button>
-                            {/*<Btn type={"button"} bsStyle={"danger"} cName={"btn"} onClick={this.handleDelete.bind(this)} label={"Delete"}/>*/}
-                        </td>
-
-                    </tr>
-                ) : (
-                    <form key={this.props.record.id} onSubmit={handleSubmit((values) => {this.handleSubmitEntry(values)})}>
-
-                            <td><Field name="name"  val={ this.props.record.name} component={renderInput} /></td>
-                            <td><Field name="course" val={this.props.record.course_name} component={renderInput} /></td>
-                            <td><Field name="grade" val={this.props.record.grade} type="number" component={renderInput} /></td>
-
-                            <td>
-                                <button type="submit" className="btn btn-primary" label="Add" >Submit</button>
-                                <button onClick={this.handleCancelClick.bind(this)} type="button" className="btn btn-danger" label="Clear">Cancel</button>
-                            </td>
-
-                    </form>
-                )}
-            </tr>
-        )
+        // if(!this.state.enableEdit){
+        //     return (
+        //         <tr className="entryContainer" key={this.props.record.id}>
+        //             <td className="nameField">{this.props.record.name}</td>
+        //             <td className="courseField">{this.props.record.course_name}</td>
+        //             <td className="gradeField">{this.props.record.grade}</td>
+        //             <td className="optsField">
+        //                 <button type="button" className="btn btn-primary" onClick={this.handleEdit.bind(this)}>Edit</button>
+        //                 <button type="button" className="btn btn-danger" onClick={this.handleDelete.bind(this)}>Delete</button>
+        //                 {/*<Btn type={"button"} bsStyle={"danger"} cName={"btn"} onClick={this.handleDelete.bind(this)} label={"Delete"}/>*/}
+        //             </td>
+        //         </tr>
+        //     )
+        // } else {
+        //     return (
+        //         <tr>
+        //         <form key={this.props.record.id} onSubmit={handleSubmit((values) => {this.handleSubmitEntry(values)})}>
+        //             <td><Field name="name" val={ this.props.record.name} component={renderInput}/></td>
+        //             <td><Field name="course" val={this.props.record.course_name} component={renderInput}/></td>
+        //             <td><Field name="grade" val={this.props.record.grade} type="number" component={renderInput}/></td>
+        //             <td>
+        //                 <button type="submit" className="btn btn-primary" label="Add">Submit</button>
+        //                 <button onClick={this.handleCancelClick.bind(this)} type="button" className="btn btn-danger"
+        //                         label="Clear">Cancel
+        //                 </button>
+        //             </td>
+        //         </form>
+        //         </tr>
+        //     )
+        // }
     }
-
 }
 function validate(values) {
     const errors = {};
