@@ -13,7 +13,7 @@ import axios from 'axios';
 
 // const BASE_URL = "../data.php?action=";//works if you use the build html file
 // const BASE_URL = "http://localhost:8080/react_cms/data.php?action="; //testing
-const BASE_URL = "/cms/data.php?action=";
+const BASE_URL = "../../data.php?action=";
 
 export function addRecord(entry){
     return function (dispatch){
