@@ -11,8 +11,8 @@ import {
 } from './type';
 import axios from 'axios';
 
-// const BASE_URL = "http://localhost:8080/react_cms/data.php?action="; //testing
-const BASE_URL = "../../react/cms/data.php?action=";
+const BASE_URL = "http://localhost:8080/react_cms/data.php?action="; //testing
+// const BASE_URL = "../../react/cms/data.php?action=";
 
 
 export function addRecord(entry){

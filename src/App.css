@@ -74,12 +74,17 @@ body{
 .tEditForm{
     text-align: center;
 }
+.spinnerContainer {
+    display: table-row;
+    position: relative;
+}
 .holder {
-    position:relative;
-    display: block;
+    display: table-cell;
     height: 50px;
     width: 60px;
-    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 8em;
 }
 .hideLoader {
     display: none;
@@ -110,7 +115,7 @@ body{
     color: #337ab7;
     text-indent: -9999em;
     margin: 25px auto;
-    position: absolute;
+    /*position: absolute;*/
     font-size: 11px;
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
