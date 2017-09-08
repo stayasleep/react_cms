@@ -17,7 +17,6 @@ class EntryBody extends Component{
 
     componentWillReceiveProps(nextProps){
         if(nextProps.allState.add){
-            console.log('these are add next props',nextProps);
             this.props.retrieveAll();
             this.setState({show: true, name:nextProps.allState.name});
         }else if(nextProps.allState.del){
@@ -34,7 +33,6 @@ class EntryBody extends Component{
         this.setState({show: false, name: null});
     }
     handleAlertAutoClose() {
-        console.log('an log');
         setTimeout(() => {
                 this.setState({show: false, name: null});
         }
@@ -42,8 +40,6 @@ class EntryBody extends Component{
     }
 
     render(){
-        //if (this.state.show) this.handleAlertAutoClose.bind(this);
-        console.log('my state',this.state);
         return(
             <Col xs={12} sm={9} className="pull-left entryList">
                 <div className="table">
