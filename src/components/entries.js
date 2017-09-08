@@ -70,6 +70,7 @@ class Entries extends Component{
     render(){
         const {handleSubmit } = this.props;
 
+
         if(!this.state.enableEdit){
             return (
                 <div className="tr tEntry">

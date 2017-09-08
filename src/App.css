@@ -192,3 +192,9 @@ SPAN.td
 .modalText{
     font-style: italic;
 }
+
+.alert-success {
+    position: fixed;
+    left: 25%;
+    bottom: 0;
+}

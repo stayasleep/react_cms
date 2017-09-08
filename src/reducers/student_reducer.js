@@ -15,7 +15,7 @@ const defaultState = {all:[], error: null, loading: true};
 export default function(state = defaultState, action){
     switch (action.type){
         case ADD_RECORD:
-            return {...state, add: action.payload};
+            return {...state, add: action.payload[0], name:action.payload[1]};
         case ADD_ERROR:
             return {...state,error: true };
         case RETR_RECORDS:

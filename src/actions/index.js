@@ -16,12 +16,13 @@ const BASE_URL = "http://localhost:8080/react_cms/data.php?action="; //testing
 
 
 export function addRecord(entry){
+    console.log('add entry', entry);
     return function (dispatch){
         axios.post(`${BASE_URL}insert`,entry ).then((response) => {
             if(response.data.success){
                 dispatch({
                     type: ADD_RECORD,
-                    payload: true,
+                    payload: [true, entry.name],
                 })
             }else if(!response.data.success){
                 dispatch({
