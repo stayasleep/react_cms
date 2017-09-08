@@ -36,7 +36,7 @@ class EntryBody extends Component{
         setTimeout(() => {
                 this.setState({show: false, name: null});
         }
-        , 4000);
+        , 2000);
     }
 
     render(){
