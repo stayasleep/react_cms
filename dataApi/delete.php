@@ -1,6 +1,4 @@
 <?php
-header('Access-Control-Allow-Origin: *');
-
 /*check connection*/
 if (mysqli_connect_errno()){
     printf("Connect failed: %s\n",mysqli_connect_error());
@@ -9,8 +7,10 @@ if (mysqli_connect_errno()){
 //check if you have all the data you need from the client-side call.
 $contents= file_get_contents("php://input");
 $contents = utf8_encode($contents);
-$res = json_decode($contents);
-$id = $res->{"id"};
+//return an associate array
+$res = json_decode($contents, true);
+
+$id = $res["id"];
 
 //escape vars
 $min = 0;

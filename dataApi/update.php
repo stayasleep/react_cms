@@ -3,30 +3,18 @@ if (mysqli_connect_errno()){
     printf("Connect failed: %s\n",mysqli_connect_error());
     exit();
 }
+//return read file as string
 $contents = file_get_contents("php://input");
 $contents = utf8_encode($contents);
-$res = json_decode($contents);
-$id = $res->{'id'};
+//true returns an associative array
+$res = json_decode($contents, true);
+
+$id = $res['id'];
 
 if (!ctype_digit($id)) {
     $output['errors'][] = "Please specify a student id";
     return;
 }
-$student = $res->{'name'};
-$course = $res->{'course_name'};
-$grade  = $res->{'grade'};
-
-if (ctype_space($student) || ctype_space($course) || ctype_space($grade)) {
-    $output['errors'][] = 'No empty fields allowed';
-    return;
-}
-
-
-$updateFields = [
-    'name' => 'name',
-    'course_name' => 'course_name',
-    'grade' => 'grade'
-];
 
 if (empty($id)) {
     $output['errors'][] = 'Missing ID';
@@ -35,26 +23,29 @@ if (empty($id)) {
 else {
 
     $query = "UPDATE `student_data` SET ";
-    foreach ($updateFields as $externalField => $internalField) {
+    foreach ($res as $externalField => $internalField) {
         // if the fields are not empty, append the information to the query string
-        if (!empty($res->{$externalField})) {
-            $slashedInput = addslashes($res->{$externalField});
-            $query .= "`$internalField` = '{$slashedInput}',";
+        if(!empty($res[$externalField])) {
+            $slashedInput = addslashes($res[$externalField]);
+            $query .= "`$externalField` = '{$slashedInput}',";
         } else {
             $output['errors'][] = "Missing ".$externalField;
         }
     }
     $query = substr($query, 0, -1);
     $query .= " WHERE `id`=$id";
-    if (count($output['errors']) === 0) {
+
+    if(count($output['errors']) === 0) {
         $result = mysqli_query($conn, $query);
         if (empty($result)) {
             $output['errors'][] = 'database error';
         } else {
+            //if the entry is updated with new values
             if (mysqli_affected_rows($conn) === 1) {
                 $output['success'] = true;
+                //if the entry is submitted with same old values
             } else if(mysqli_affected_rows($conn)===0){
-                $output['success'] = true; //orly
+                $output['success'] = true;
             } else {
                 $output['errors'][] = 'update error';
             }

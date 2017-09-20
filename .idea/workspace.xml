@@ -14,7 +14,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.59465855">
+    <splitter split-orientation="horizontal" split-proportion="0.59354836">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
           <file leaf-file-name="App.css" pinned="false" current-in-tab="false">
@@ -30,7 +30,11 @@
           <file leaf-file-name="entry_body.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/entry_body.js">
               <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
                 <state relative-caret-position="1600">
+=======
+                <state relative-caret-position="1400">
+>>>>>>> f443b64f5afec5e6775a0c7c210d5038052507f8
                   <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#39#0" expanded="true" />
@@ -39,7 +43,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="0">
@@ -59,12 +63,60 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/actions/index.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="160">
                   <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="insert.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/dataApi/insert.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="520">
+                  <caret line="13" column="16" lean-forward="true" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+                  <folding>
+                    <marker date="1505869033827" expanded="true" signature="1423:1495" ph="INSERT INTO `student_data`... " />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="delete.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/dataApi/delete.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+                  <folding>
+                    <marker date="1505872109688" expanded="true" signature="826:866" ph="DELETE FROM " />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="update.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/dataApi/update.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1880">
+                  <caret line="47" column="42" lean-forward="false" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
+                  <folding>
+                    <marker date="1505872109717" expanded="true" signature="503:528" ph="UPDATE `stud... " />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="read.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/dataApi/read.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="440">
+                  <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+                  <folding>
+                    <marker date="1503455891303" expanded="true" signature="233:261" ph="SELECT * FRO... student_data" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -93,10 +145,14 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
+<<<<<<< HEAD
           <file leaf-file-name="entries.js" pinned="false" current-in-tab="false">
+=======
+          <file leaf-file-name="entries.js" pinned="false" current-in-tab="true">
+>>>>>>> f443b64f5afec5e6775a0c7c210d5038052507f8
             <entry file="file://$PROJECT_DIR$/src/components/entries.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="958">
+                <state relative-caret-position="-967">
                   <caret line="89" column="20" lean-forward="false" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="20" />
                   <folding />
                 </state>
@@ -137,15 +193,11 @@
         <option value="$PROJECT_DIR$/src/reducers/student.js" />
         <option value="$PROJECT_DIR$/src/components/utilities/buttons.js" />
         <option value="$PROJECT_DIR$/build/index.html" />
-        <option value="$PROJECT_DIR$/dataApi/read.php" />
         <option value="$PROJECT_DIR$/data.php" />
         <option value="$PROJECT_DIR$/src/reducers/index.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/utilities/renderInput.js" />
-        <option value="$PROJECT_DIR$/dataApi/insert.php" />
         <option value="$PROJECT_DIR$/src/actions/type.js" />
-        <option value="$PROJECT_DIR$/dataApi/delete.php" />
-        <option value="$PROJECT_DIR$/dataApi/update.php" />
         <option value="$PROJECT_DIR$/mysql_connect.php" />
         <option value="$PROJECT_DIR$/src/components/error_modal.js" />
         <option value="$PROJECT_DIR$/src/components/add.js" />
@@ -158,8 +210,12 @@
         <option value="$PROJECT_DIR$/src/reducers/student_reducer.js" />
         <option value="$PROJECT_DIR$/src/App.css" />
         <option value="$PROJECT_DIR$/src/components/entries.js" />
-        <option value="$PROJECT_DIR$/src/actions/index.js" />
         <option value="$PROJECT_DIR$/src/components/entry_body.js" />
+        <option value="$PROJECT_DIR$/dataApi/insert.php" />
+        <option value="$PROJECT_DIR$/dataApi/update.php" />
+        <option value="$PROJECT_DIR$/dataApi/delete.php" />
+        <option value="$PROJECT_DIR$/dataApi/read.php" />
+        <option value="$PROJECT_DIR$/src/actions/index.js" />
       </list>
     </option>
   </component>
@@ -199,7 +255,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
       <pane id="Scope" />
+=======
+>>>>>>> f443b64f5afec5e6775a0c7c210d5038052507f8
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -293,6 +352,10 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+<<<<<<< HEAD
+=======
+      <pane id="Scope" />
+>>>>>>> f443b64f5afec5e6775a0c7c210d5038052507f8
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -398,18 +461,31 @@
       <workItem from="1503283604753" duration="28772000" />
       <workItem from="1503360512876" duration="86972000" />
       <workItem from="1504824177905" duration="7988000" />
+<<<<<<< HEAD
       <workItem from="1505872476047" duration="14000" />
+=======
+      <workItem from="1505630355222" duration="4000" />
+      <workItem from="1505866363245" duration="6026000" />
+>>>>>>> f443b64f5afec5e6775a0c7c210d5038052507f8
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="173894000" />
+=======
+    <option name="totallyTimeSpent" value="179910000" />
+>>>>>>> f443b64f5afec5e6775a0c7c210d5038052507f8
   </component>
   <component name="ToolWindowManager">
     <frame x="-16" y="-16" width="3232" height="1732" extended-state="6" />
     <editor active="true" />
     <layout>
+<<<<<<< HEAD
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16096774" sideWeight="0.49582464" order="0" side_tool="false" content_ui="combo" />
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1632258" sideWeight="0.49582464" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> f443b64f5afec5e6775a0c7c210d5038052507f8
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -604,13 +680,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build/index.html" />
-    <entry file="file://$PROJECT_DIR$/dataApi/read.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-659">
@@ -642,6 +711,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/dataApi/delete.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -656,6 +726,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> f443b64f5afec5e6775a0c7c210d5038052507f8
     <entry file="file://$PROJECT_DIR$/src/components/headers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-400">
@@ -770,12 +842,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/entries.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="958">
+        <state relative-caret-position="-967">
           <caret line="89" column="20" lean-forward="false" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/actions/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -787,6 +860,11 @@
     <entry file="file://$PROJECT_DIR$/src/components/entry_body.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1600">
+=======
+    <entry file="file://$PROJECT_DIR$/src/components/entry_body.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1400">
+>>>>>>> f443b64f5afec5e6775a0c7c210d5038052507f8
           <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
@@ -802,15 +880,65 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/dataApi/update.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
           <folding>
             <marker date="1505872461277" expanded="true" signature="768:793" ph="UPDATE `stud... " />
+=======
+    <entry file="file://$PROJECT_DIR$/dataApi/delete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding>
+            <marker date="1505872109688" expanded="true" signature="826:866" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dataApi/insert.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="13" column="16" lean-forward="true" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding>
+            <marker date="1505869033827" expanded="true" signature="1423:1495" ph="INSERT INTO `student_data`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataApi/update.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1880">
+          <caret line="47" column="42" lean-forward="false" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
+          <folding>
+            <marker date="1505872109717" expanded="true" signature="503:528" ph="UPDATE `stud... " />
+>>>>>>> f443b64f5afec5e6775a0c7c210d5038052507f8
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/dataApi/read.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+          <folding>
+            <marker date="1503455891303" expanded="true" signature="233:261" ph="SELECT * FRO... student_data" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/actions/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> f443b64f5afec5e6775a0c7c210d5038052507f8
   </component>
 </project>

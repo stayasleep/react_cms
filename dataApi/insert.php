@@ -1,22 +1,22 @@
 <?php
 /*check connection*/
-//header('Access-Control-Allow-Origin: *');
-//header('Access-Control-Allow-Methods: POST,GET,OPTIONS');
-//header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 
 if (mysqli_connect_errno()){
     printf("Connect failed: %s\n",mysqli_connect_error());
     exit();
 }
+//reads entire file into a string
 $contents= file_get_contents("php://input");
-//print_r($contents);
+
 $contents = utf8_encode($contents);
-$res = json_decode($contents);
-//print_r($res->{'name'});
+//true will return to us an associative array
+$res = json_decode($contents, true);
+//print_r($res);
+
 //check if you have all the data you need from the client-side call.
-$name = $res->{'name'};
-$grade = $res->{'grade'};
-$course_name = $res->{'course'};
+$name = $res['name'];
+$grade = $res['grade'];
+$course_name = $res['course'];
 //if not, add an appropriate error to errors
 if(empty($name)){
     $output['errors'][]="Missing Name";
