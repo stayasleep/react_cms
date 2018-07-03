@@ -12,9 +12,6 @@ class Entries extends Component{
         this.state={
             enableEdit: false,
             enableDelete: false,
-            name: this.props.record.name,
-            course: this.props.record.course_name,
-            grade: this.props.record.grade,
         }
     }
 
@@ -90,13 +87,13 @@ class Entries extends Component{
             return (
                 <form className="tr tEditForm" onSubmit={handleSubmit((values) => {this.handleSubmitEntry(values)})}>
                     <span className="td tForm">
-                        <Field className="form-control" val={this.state.name}  name="name"  component={renderInput} />
+                        <Field className="form-control" name="name"  component={renderInput} />
                     </span>
                     <span className="td tForm">
-                        <Field className="form-control" val={this.state.course}  name="course_name" component={renderInput} />
+                        <Field className="form-control" name="course_name" component={renderInput} />
                     </span>
                     <span className="td tForm">
-                        <Field className="form-control" val={this.state.grade} name="grade" type="number" component={renderInput} />
+                        <Field className="form-control" name="grade" type="number" component={renderInput} />
                     </span>
                     <span className="td tForm btnBox">
                         <button type="submit" className="btn edit btn-outline-dark" label="Submit">Submit</button>
