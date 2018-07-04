@@ -18,7 +18,6 @@ class Headers extends Component{
     }
 
     render(){
-
         return(
             <Col>
                 <div className="hidden-xs">

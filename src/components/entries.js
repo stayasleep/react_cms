@@ -44,7 +44,6 @@ class Entries extends Component{
     }
 
     handleEdit(){
-        console.log('edit mode',this);
         this.setState({
             enableEdit: !this.state.enableEdit,
         });
@@ -66,7 +65,6 @@ class Entries extends Component{
 
     render(){
         const {handleSubmit } = this.props;
-
 
         if(!this.state.enableEdit){
             return (
